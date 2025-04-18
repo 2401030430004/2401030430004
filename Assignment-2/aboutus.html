@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour Guide</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        
+        header {
+            background-color: transparent;
+            position: absolute;
+            width: 100%;
+            z-index: 10;
+            padding: 15px 0;
+            padding: 20px 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            font-weight: 400;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+        nav li a {
+            cursor: pointer;
+            text-decoration: none;
+            color: black;
+        }
+
+        .login-btn {
+            background: #ffd700;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+        
+        .hero {
+            height: 600px;
+            background: url('img/Section\ →\ image.png') no-repeat center center/cover;
+            color: #fff;
+            text-align: center;
+            padding-top: 200px;
+        }
+
+        .hero h1 {
+            font-size: 45px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .play-btn {
+            width: 50px;
+            height: 50px;
+            background-color: rgba(255,255,255,0.7);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 30px auto;
+            cursor: pointer;
+        }
+
+        .play-btn i {
+            border-style: solid;
+            border-width: 10px 0 10px 15px;
+            border-color: transparent transparent transparent #333;
+        }
+
+        /* About Section */
+        .about {
+            padding: 50px 0;
+            text-align: center;
+            background-color: #f9f9f9;
+        }
+
+        .about h2 {
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
+
+        .about-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 50px;
+            margin-top: 20px;
+        }
+
+        .about-logo {
+            width: 150px;
+        }
+
+        .about-text {
+            max-width: 600px;
+            text-align: left;
+        }
+
+        .mission-statement {
+            background-color: #f2f2f2;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+
+        .vision-statement {
+            background-color: #f2f2f2;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+
+        .read-more-btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            padding: 50px 0;
+        }
+
+        .testimonials h2 {
+            font-size: 30px;
+            margin-bottom: 40px;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            padding: 20px;
+            border-radius: 5px;
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .testimonial-header {
+            color: #FF6B35;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .testimonial-quote {
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .author-img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        /* Stats Section */
+        .stats {
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+            padding: 30px 0;
+        }
+
+        .stat-item {
+            flex: 1;
+        }
+
+        .stat-number {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            color: #666;
+        }
+
+        
+        .why-choose {
+            padding: 50px 0;
+            background-color: #f9f9f9;
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .why-content {
+            flex: 1;
+        }
+
+        .why-content h2 {
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
+
+        .feature {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+
+        .feature-icon {
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 107, 53, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .feature-icon img {
+            width: 24px;
+            height: 24px;
+        }
+
+        .feature-text h3 {
+            margin-bottom: 5px;
+        }
+
+        .why-image {
+            flex: 1;
+            max-width: 500px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .why-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Company Stats */
+        .company-stats {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        .company-stat {
+            flex: 1;
+        }
+
+        .stat-icon {
+            margin-bottom: 15px;
+        }
+
+        .stat-icon img {
+            width: 24px;
+            height: 24px;
+        }
+
+        .stat-value {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0F2043;
+            color: #fff;
+            padding: 50px 0 20px;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer-section {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .footer-section select {
+            background-color: #0A1632;
+            color: #fff;
+            border: 1px solid #344766;
+            padding: 8px;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+
+        .payment-methods {
+            display: flex;
+            gap: 5px;
+            flex-wrap: wrap;
+        }
+
+        .payment-icon {
+            width: 40px;
+            height: 25px;
+            background-color: #fff;
+            border-radius: 3px;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #344766;
+            margin-top: 20px;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-icon {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: #344766;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+   
+    <header class="header">
+        <div class="logo">tour <span>guide</span></div>
+        <nav>
+          <ul>
+            <li><a href="Home.html">Home</a></li>
+                <li><a href="aboutus.html"><strong>About us</strong></a></li>
+                <li><a href="ourpackages.html">Our Packages</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="#">Help</a></li>
+          </ul>
+        </nav>
+        <a href="login.html">
+            <button class="login-btn">Log in</button>
+        </a>
+      </header>
+
+    
+    <section class="hero">
+        <div class="container">
+            <h1>Keep things flexible</h1>
+            <p>Use Reserve Now & Pay Later to secure the activities you don't want to miss without being locked in.</p>
+            <div class="play-btn">
+                <i></i>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="about">
+        <div class="container">
+            <h2>About us</h2>
+            <div class="about-content">
+               
+                <div class="about-text">
+                    <p>We are passionate storytellers, experienced explorers, and dedicated tour guides committed to bringing destinations to life. Whether you're wandering through historic landmarks, exploring hidden gems, or immersing yourself in local cultures, our mission is to create unforgettable travel experiences.</p>
+                    
+                    <div class="mission-statement">
+                        <h3>Mission Statement</h3>
+                        <p>Our mission is to provide enriching, engaging, and seamless travel experiences that connect people with cultures, history, and nature. Through expert storytelling, personalized service, and sustainable practices, we aim to create unforgettable journeys that inspire, educate, and foster a deeper appreciation for the world. ❤️</p>
+                    </div>
+                    
+                    <div class="vision-statement">
+                        <h3>Vision Statement</h3>
+                        <p>To inspire and connect travelers through immersive, educational, and unforgettable experiences, making every journey a story worth telling. We strive to be the leading tour guide service, bringing cultures, history, and destinations to life with passion, authenticity, and excellence. 💙</p>
+                    </div>
+                    
+                    <button class="read-more-btn">READ MORE</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+    <section class="testimonials">
+        <div class="container">
+            <h2>What our Travelers are saying</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-header">Great Work</div>
+                    <p class="testimonial-quote">"I think Eduerai is the best theme I ever seen this year. Amazing design, easy to customize and a design quality superlative account on its cloud platform for the optimized performance"</p>
+                    <div class="testimonial-author">
+                        <img src="img/p.png" alt="Courtney Henry" class="author-img">
+                        <div>
+                            <div>Courtney Henry</div>
+                            <div>Web Designer</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-header">Great Work</div>
+                    <p class="testimonial-quote">"I think Eduerai is the best theme I ever seen this year. Amazing design, easy to customize and a design quality superlative account on its cloud platform for the optimized performance"</p>
+                    <div class="testimonial-author">
+                        <img src="img/p.png" alt="Courtney Henry" class="author-img">
+                        <div>
+                            <div>Courtney Henry</div>
+                            <div>Web Designer</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-header">Great Work</div>
+                    <p class="testimonial-quote">"I think Eduerai is the best theme I ever seen this year. Amazing design, easy to customize and a design quality superlative account on its cloud platform for the optimized performance"</p>
+                    <div class="testimonial-author">
+                        <img src="img/p.png" alt="Courtney Henry" class="author-img">
+                        <div>
+                            <div>Courtney Henry</div>
+                            <div>Web Designer</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="stats">
+                <div class="stat-item">
+                    <div class="stat-number">4.9</div>
+                    <div class="stat-label">1000+ reviews on Tour Guide, Certificate of Excellence</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">16M</div>
+                    <div class="stat-label">Happy Customers</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">Award winner</div>
+                    <div class="stat-label">G2's 2021 Best Software Awards</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="why-choose">
+        <div class="container" style="display: flex; gap: 50px;">
+            <div class="why-content">
+                <h2>Why choose Tourz</h2>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <img src="img/i1.png" alt="Calendar Icon">
+                    </div>
+                    <div class="feature-text">
+                        <h3>Ultimate flexibility</h3>
+                        <p>You're in control, with free cancellation and payment.</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <img src="img/i2.png" alt="Heart Icon">
+                    </div>
+                    <div class="feature-text">
+                        <h3>Memorable experiences</h3>
+                        <p>Browse and book tours and activities so incredible.</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <img src="img/i3.png" alt="Star Icon">
+                    </div>
+                    <div class="feature-text">
+                        <h3>Quality at our core</h3>
+                        <p>High quality standards. Millions of reviews.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="why-image">
+                <img src="img/ballon.png" alt="Hot air balloons over landscape">
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="company-stats">
+        <div class="container">
+            <div class="company-stat">
+                <div class="stat-icon">
+                    <img src="img/11.png" alt="Question Icon">
+                </div>
+                <div class="stat-value">932M</div>
+                <div class="stat-label">Total Questions</div>
+            </div>
+            <div class="company-stat">
+                <div class="stat-icon">
+                    <img src="img/22.png" alt="Campaign Icon">
+                </div>
+                <div class="stat-value">24M</div>
+                <div class="stat-label">Campaigns Closed</div>
+            </div>
+            <div class="company-stat">
+                <div class="stat-icon">
+                    <img src="img/33.png" alt="People Icon">
+                </div>
+                <div class="stat-value">10M</div>
+                <div class="stat-label">Happy People</div>
+            </div>
+            <div class="company-stat">
+                <div class="stat-icon">
+                    <img src="img/44.png" alt="Volunteer Icon">
+                </div>
+                <div class="stat-value">65M</div>
+                <div class="stat-label">Our Volunteers</div>
+            </div>
+        </div>
+    </section>
+
+    
+    <footer class="footer">
+    <div class="footer-left">
+      <div>
+        <label>Language</label>
+        <select>
+          <option>🇬🇧 English (UK)</option>
+        </select>
+      </div>
+      <div>
+        <label>Currency</label>
+        <select>
+          <option>U.S. Dollar ($)</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="footer-links">
+      <div>
+        <h5>Company</h5>
+        <ul>
+          <li>About Us</li>
+          <li>Blog</li>
+          <li>Press Room</li>
+          <li>Careers</li>
+        </ul>
+      </div>
+      <div>
+        <h5>Support</h5>
+        <ul>
+          <li>Contact us</li>
+          <li>FAQs</li>
+          <li>Terms and conditions</li>
+          <li>Privacy policy</li>
+          <li>Sitemap</li>
+        </ul>
+      </div>
+      <div>
+        <h5>Company</h5>
+        <ul>
+          <li>Become a Tour guide for Us</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2021 Tour Guide. All Rights Reserved</p>
+      <div class="social-icons">🌐 🐦 📘 📸 📌</div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Packages - Tour Guide</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      color: #1e1e1e;
+    }
+
+    .header {
+      background: #fff;
+      padding: 20px 50px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #eee;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .logo span {
+      font-weight: 400;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+    nav li a {
+      cursor: pointer;
+      text-decoration: none;
+      color: black;
+    }
+
+    .login-btn {
+      background: #ffd700;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 6px;
+      font-weight: bold;
+      color: black;
+    }
+    .container {
+      padding: 40px 50px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    h1 {
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .rating {
+      color: orange;
+      font-size: 14px;
+    }
+    .main-image {
+      width: 100%;
+      max-width: 600px;
+      margin: 20px 0;
+    }
+    .thumbnails img {
+      width: 80px;
+      margin-right: 10px;
+      border-radius: 4px;
+    }
+    .info-box {
+      background: #f9f9f9;
+      padding: 20px;
+      border-radius: 6px;
+      margin-top: 20px;
+    }
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-top: 20px;
+    }
+    .feature {
+      width: 250px;
+      font-size: 14px;
+    }
+    section {
+      margin-top: 50px;
+    }
+    .section-title {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    .map {
+      margin: 20px 0;
+      max-width: 100%;
+    }
+    .related {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .card {
+      width: 220px;
+      background: #fff;
+      border: 1px solid #eee;
+      border-radius: 6px;
+      overflow: hidden;
+      font-size: 13px;
+    }
+    .card img {
+      width: 100%;
+      height: 130px;
+      object-fit: cover;
+    }
+    .card-body {
+      padding: 10px;
+    }
+    .card-price {
+      font-weight: bold;
+      margin-top: 5px;
+    }
+    .review-score {
+      font-size: 24px;
+      font-weight: bold;
+      margin-right: 10px;
+    }
+    .review-summary {
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+    }
+    .progress {
+      height: 6px;
+      background: #ddd;
+      border-radius: 10px;
+      margin-top: 6px;
+    }
+    .progress-bar {
+      height: 6px;
+      background: #fcd34d;
+      border-radius: 10px;
+    }
+    .reviews {
+      margin-top: 30px;
+    }
+    .review-item {
+      border-bottom: 1px solid #eee;
+      padding: 15px 0;
+    }
+    .reviewer {
+      font-weight: bold;
+      font-size: 14px;
+    }
+    .footer {
+      background: #0a1d3c;
+      color: #fff;
+      padding: 40px 50px;
+      margin-top: 50px;
+      font-size: 13px;
+    }
+    .footer .row {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .footer ul {
+      list-style: none;
+      padding: 0;
+    }
+    .footer ul li {
+      margin-bottom: 5px;
+    }
+    .footer .copyright {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 12px;
+    }
+    button {
+      background: #25a18e;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">tour <span>guide</span></div>
+        <nav>
+          <ul>
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="ourpackages.html"><strong>Our Packages</strong></a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="help.html">Help</a></li>
+          </ul>
+        </nav>
+        <a href="login.html">
+            <button class="login-btn">Log in</button>
+        </a>
+      </header>
+
+  <div class="container">
+    <h1>Vintage Double Decker Bus Tour & Thames River Cruise</h1>
+    <p><span class="rating">★ ★ ★ ★ ★</span> (348 reviews)</p>
+    <img src="img/explore_city.png" class="main-image" alt="Tour Image" />
+    <div class="thumbnails">
+      <img src="img/1.png" />
+      <img src="img/2.png" />
+      <img src="img/3.png" />
+      <img src="img/4.png" />
+    </div>
+
+    <div class="info-box">
+      <div class="features">
+        <div class="feature">✔ Free Cancellation</div>
+        <div class="feature">✔ Mobile Ticketing</div>
+        <div class="feature">✔ Instant Confirmation</div>
+        <div class="feature">✔ Health Precautions</div>
+        <div class="feature">✔ Duration: 3.5 Hours</div>
+        <div class="feature">✔ English Guide</div>
+      </div>
+    </div>
+
+    <section>
+      <div class="section-title">Description</div>
+      <p>See the highlights of London via 2 classic modes of transport on this half-day adventure...</p>
+    </section>
+
+    <section>
+      <div class="section-title">Activity</div>
+      <ul>
+        <li>Discover London on board a classic Routemaster</li>
+        <li>Cruise down the River Thames</li>
+        <li>See Changing of the Guard</li>
+        <li>Visit Westminster Abbey</li>
+      </ul>
+    </section>
+
+    <section>
+      <div class="section-title">What Is Included / Not Included</div>
+      <ul>
+        <li>✔ Double-decker Routemaster tour</li>
+        <li>✔ Short trip along the River Thames</li>
+        <li>✔ Changing of the Guard</li>
+        <li>✘ Gratuities</li>
+      </ul>
+    </section>
+
+    <section>
+      <div class="section-title">Safety</div>
+      <ul>
+        <li>✔ Masks required</li>
+        <li>✔ Sanitized vehicles</li>
+        <li>✔ Limited capacity</li>
+      </ul>
+    </section>
+
+    <section>
+      <div class="section-title">Meeting Point Address</div>
+      <p>Meet at the west entrance of Altoh Ali Park (Whitechapel Rd)...</p>
+      <img src="img/map.png" alt="Map" class="map" />
+    </section>
+
+    <section>
+      <div class="section-title">Related Tours In Today</div>
+      <div class="related">
+        <div class="card">
+          <img src="img/1.png" />
+          <div class="card-body">
+            <p>Alaska: Vintage Bus & Thames</p>
+            <p class="card-price">$35.00</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="img/1.png" />
+          <div class="card-body">
+            <p>Alaska: Vintage Bus & Thames</p>
+            <p class="card-price">$35.00</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="img/1.png" />
+          <div class="card-body">
+            <p>Alaska: Vintage Bus & Thames</p>
+            <p class="card-price">$35.00</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="img/1.png" />
+          <div class="card-body">
+            <p>Alaska: Vintage Bus & Thames</p>
+            <p class="card-price">$35.00</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="img/1.png" />
+          <div class="card-body">
+            <p>Alaska: Vintage Bus & Thames</p>
+            <p class="card-price">$35.00</p>
+          </div>
+        </div>
+        
+        <div class="card">
+          <img src="img/1.png" />
+          <div class="card-body">
+            <p>Alaska: Vintage Bus & Thames</p>
+            <p class="card-price">$35.00</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="img/1.png" />
+          <div class="card-body">
+            <p>Alaska: Vintage Bus & Thames</p>
+            <p class="card-price">$35.00</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="img/1.png" />
+          <div class="card-body">
+            <p>Alaska: Vintage Bus & Thames</p>
+            <p class="card-price">$35.00</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="img/1.png" />
+          <div class="card-body">
+            <p>Alaska: Vintage Bus & Thames</p>
+            <p class="card-price">$35.00</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="img/1.png" />
+          <div class="card-body">
+            <p>Alaska: Vintage Bus & Thames</p>
+            <p class="card-price">$35.00</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="reviews">
+      <div class="section-title">Customer Review</div>
+      <div class="review-summary">
+        <span class="review-score">4.3</span>
+        <span>854 Reviews</span>
+      </div>
+
+      <div class="review-item">
+        <div class="reviewer">Arlene McCoy ★★★★☆</div>
+        <p>The tour was well organized...</p>
+      </div>
+
+      <div class="review-item">
+        <div class="reviewer">Jenny Wilson ★★★★☆</div>
+        <p>Informative but didn’t see Changing of the Guard...</p>
+      </div>
+    </section>
+  </div>
+
+  <footer class="footer">
+    <div class="row">
+      <div>
+        <h4>Language</h4>
+        <ul><li>🇬🇧 English (UK)</li></ul>
+        <h4>Currency</h4>
+        <ul><li>💲 U.S. Dollar ($)</li></ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li>About Us</li>
+          <li>Blog</li>
+          <li>Press Room</li>
+          <li>Careers</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <ul>
+          <li>Contact us</li>
+          <li>FAQs</li>
+          <li>Terms and Conditions</li>
+          <li>Privacy policy</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Payment Methods</h4>
+        <img src="images/cards.png" alt="Cards" style="width: 150px;">
+        <h4>Company</h4>
+        <ul><li>Become a Tour Guide</li></ul>
+      </div>
+    </div>
+    <div class="copyright">
+      © 2025 Tour Guide. All Rights Reserved.
+    </div>
+  </footer>
+</body>
+</html>

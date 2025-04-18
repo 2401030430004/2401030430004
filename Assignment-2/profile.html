@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Profile</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    }
+
+    body {
+    font-family: 'Inter', sans-serif;
+    background: #f7f8fc;
+    color: #333;
+    }
+
+    .header {
+    background: #fff;
+    padding: 20px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #eee;
+    }
+
+    .logo {
+    font-size: 24px;
+    font-weight: bold;
+    }
+    .logo span {
+    font-weight: 400;
+    }
+
+    nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    }
+    nav li a{
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+
+    }
+
+    .login-btn {
+    background: #ffd700;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-weight: bold;
+    }
+
+    .profile-banner {
+    background: #fff;
+    padding: 40px 50px 20px;
+    }
+    .profile-banner h2 {
+    font-size: 24px;
+    }
+    .profile-banner p {
+    margin-top: 8px;
+    color: #777;
+    }
+
+    .profile-container {
+    display: flex;
+    padding: 30px 50px;
+    gap: 30px;
+    }
+
+    .sidebar {
+    width: 300px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 30px 20px;
+    }
+
+    .profile-pic-container {
+    text-align: center;
+    }
+    .profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    }
+    .edit-icon {
+    background: #2ebd59;
+    color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    padding: 5px;
+    position: relative;
+    top: -30px;
+    left: 35px;
+    cursor: pointer;
+    }
+    .profile-pic-container h3 {
+    margin: -10px 0 5px;
+    }
+    .profile-pic-container p {
+    font-size: 14px;
+    color: #666;
+    }
+
+    .menu {
+    list-style: none;
+    margin-top: 30px;
+    }
+    .menu li {
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    }
+    .menu .active {
+    background: #e8f5ef;
+    font-weight: bold;
+    color: #2ebd59;
+    }
+
+    .profile-details {
+    flex: 1;
+    background: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    }
+
+    .section {
+    margin-bottom: 40px;
+    }
+
+    .section h4 {
+    margin-bottom: 20px;
+    font-size: 18px;
+    }
+
+    label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+    }
+
+    input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    }
+
+    .save-btn {
+    background: #2ebd59;
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    }
+
+    .footer {
+    background: #0d2238;
+    color: white;
+    padding: 40px 50px 20px;
+    }
+
+    .footer-left {
+    display: flex;
+    gap: 50px;
+    margin-bottom: 30px;
+    }
+    .footer-left label {
+    display: block;
+    margin-bottom: 5px;
+    }
+    .footer-left select {
+    padding: 8px;
+    border-radius: 6px;
+    border: none;
+    }
+
+    .footer-links {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    }
+
+    .footer-links h5 {
+    margin-bottom: 10px;
+    }
+
+    .footer-links ul {
+    list-style: none;
+    }
+    .footer-links li {
+    margin-bottom: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    }
+
+    .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #2a3e54;
+    padding-top: 20px;
+    font-size: 14px;
+    }
+
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="logo">tour <span>guide</span></div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="ourpackages.html">Our Packages</a></li>
+        <li><a href="profile.html"><strong>Profile</strong></a></li>
+        <li><a href="help.html">Help</a></li>
+      </ul>
+    </nav>
+    <a href="login.html">
+        <button class="login-btn">Log in</button>
+    </a>
+  </header>
+
+  <section class="profile-banner">
+    <h2>My Profile</h2>
+    <p>Home / My Profile</p>
+  </section>
+
+  <main class="profile-container">
+    <aside class="sidebar">
+      <div class="profile-pic-container">
+        <img src="img/profile_img.png" alt="Profile" class="profile-pic">
+        <div class="edit-icon">✎</div>
+        <h3>Masum Rana</h3>
+        <p><span>📍</span> Gothenburg &nbsp; <span>📅</span> 15th February</p>
+      </div>
+      <ul class="menu">
+        <li class="active">Profile Informations</li>
+        <li>Booking History</li>
+        <li>Newsletter Subscription</li>
+        <li>Manage Notifications</li>
+      </ul>
+    </aside>
+
+    <section class="profile-details">
+      <div class="section">
+        <h4>Personal Information</h4>
+        <label>Name:</label>
+        <input type="text" value="Masum Rana">
+
+        <label>Date Of Birth</label>
+        <input type="date" value="1886-03-15">
+
+        <label>Phone</label>
+        <input type="text" value="+46-7644 394 68">
+
+        <label>Location</label>
+        <input type="text" value="Gothenburg">
+
+        <button class="save-btn">Save</button>
+      </div>
+
+      <div class="section">
+        <h4>Security</h4>
+        <label>Email Address</label>
+        <input type="email" value="masumrana15@gmail.com">
+
+        <label>Password</label>
+        <input type="password" value="12345678">
+
+        <label>Confirm Password</label>
+        <input type="password" value="12345678">
+
+        <button class="save-btn">Save</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-left">
+      <div>
+        <label>Language</label>
+        <select>
+          <option>🇬🇧 English (UK)</option>
+        </select>
+      </div>
+      <div>
+        <label>Currency</label>
+        <select>
+          <option>U.S. Dollar ($)</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="footer-links">
+      <div>
+        <h5>Company</h5>
+        <ul>
+          <li>About Us</li>
+          <li>Blog</li>
+          <li>Press Room</li>
+          <li>Careers</li>
+        </ul>
+      </div>
+      <div>
+        <h5>Support</h5>
+        <ul>
+          <li>Contact us</li>
+          <li>FAQs</li>
+          <li>Terms and conditions</li>
+          <li>Privacy policy</li>
+          <li>Sitemap</li>
+        </ul>
+      </div>
+      <div>
+        <h5>Company</h5>
+        <ul>
+          <li>Become a Tour guide for Us</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2021 Tour Guide. All Rights Reserved</p>
+      <div class="social-icons">🌐 🐦 📘 📸 📌</div>
+    </div>
+  </footer>
+</body>
+</html>
